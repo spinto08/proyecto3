@@ -11,11 +11,12 @@ body{
     width: 1100px;
     margin: 0px auto;
     border: 10px solid white;
+    overflow: hidden;
  } 
  header{
     background: purple;
-    height: 100p;
-    width : 1000px;
+    height: 100px;
+    width : 100%;
     margin: 0px;
     text-align: center;
     line-height: 100px;
@@ -23,35 +24,47 @@ body{
     border-bottom: 3px; 
  }
  nav ul li{
-    float: left;
+    display: inline;
     list-style: none;
     margin: 20px;
-    line-height: 2px;
- }
- .clearfix {
-    clear: both;
+ 
  }
  nav{
     background: green;
     height: 40px;
     border-bottom: 2px solid black;
+   }
+   .clearfix::after {
+      content: '''';
+      display: table;
+      clear: both;
+
  }
  
 #content{
     float: left;
-    width: calc(80% - 80px);
-    min-height: 500px;
+    width: 65%;
+    min-height: 510px;
     background: blueviolet;
     padding: 40pt;
  }
 
- #aside{
-    float: left;
-    width: calc(20% - 20px);
+ .aside{
+    float:"right"
+    width: 25%;
     background: orange;
-    min-height: 500px;
+    min-height: 610px;
     padding-left: 10px;
     padding-right: 10px;
+ }
+
+ footer{
+   clear: both;
+   text-align: center;
+   background: purple;
+   color: white;
+   padding: 10px;
+
  }
 
  
